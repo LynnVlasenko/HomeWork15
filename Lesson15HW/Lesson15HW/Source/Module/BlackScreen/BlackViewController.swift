@@ -33,7 +33,10 @@ class BlackViewController: UIViewController {
         view.addSubview(goToGreenButton)
     }
     
+    // MARK: - Actions
     @objc private func didTabToGoToGreenButton() {
+        let greenVC = GreenViewController()
+        self.navigationController?.pushViewController(greenVC, animated: true)
         print("BlackViewController -> didTabToGoToGreenButton")
     }
     
