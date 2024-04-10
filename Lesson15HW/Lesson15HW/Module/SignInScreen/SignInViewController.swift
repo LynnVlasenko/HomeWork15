@@ -1,5 +1,5 @@
 //
-//  WelcomeViewController.swift
+//  SignInViewController.swift
 //  Lesson15HW
 //
 //  Created by Алина Власенко on 10.04.2024.
@@ -7,9 +7,9 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+class SignInViewController: UIViewController {
 
-    let contentView = WelcomeContentView()
+    let contentView = SignInContentView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +18,6 @@ class WelcomeViewController: UIViewController {
         // setup UI Elements
         addSubviews()
         applyConstraints()
-        setupButtons()
     }
     
     // MARK: - Add Subviews
@@ -40,4 +39,3 @@ class WelcomeViewController: UIViewController {
         NSLayoutConstraint.activate(contentViewConstraints)
     }
 }
-

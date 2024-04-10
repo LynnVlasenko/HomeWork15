@@ -9,31 +9,31 @@ import UIKit
 
 class WelcomeButtonStackView: UIStackView {
     
-    // MARK: - UI
+    var didTabToSignInButtonComplition: (() -> ())?
+    var didTabToSignUpButtonComplition: (() -> ())?
     
-    let signInButton: UIButton = {
+    // MARK: - UI
+    private let signInButton: UIButton = {
         let button = UIButton()
         button.setTitle("Sign In", for: .normal)
         button.backgroundColor = .systemBlue
         button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 5
-        button.isEnabled = false
         button.addTarget(self, action: #selector(didTabToSignInButton), for: .touchUpInside)
         return button
     }()
     
-    let signUpButton: UIButton = {
+    private let signUpButton: UIButton = {
         let button = UIButton()
         button.setTitle("Sign Up", for: .normal)
         button.backgroundColor = .systemBlue
         button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 5
-        button.isEnabled = false
         button.addTarget(self, action: #selector(didTabToSignUpButton), for: .touchUpInside)
         return button
     }()
     
-    let skipButton: UIButton = {
+    private let skipButton: UIButton = {
         let button = UIButton()
         button.setTitle("Skip", for: .normal)
         button.backgroundColor = .white
@@ -41,15 +41,13 @@ class WelcomeButtonStackView: UIStackView {
         button.layer.borderColor = UIColor.systemBlue.cgColor
         button.layer.borderWidth = 1
         button.layer.cornerRadius = 5
-        button.isEnabled = false
         button.addTarget(self, action: #selector(didTabToSkipButton), for: .touchUpInside)
         return button
     }()
-    // MARK: - init
     
+    // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
-        //backgroundColor = .blue
         
         addSubviews()
         applyConstraints()
@@ -66,17 +64,18 @@ class WelcomeButtonStackView: UIStackView {
     }
     
     // MARK: - Actions
-    
     @objc private func didTabToSignInButton() {
-        
+        didTabToSignInButtonComplition?()
+        print("WelcomeButtonStackView -> didTabToSignInButton")
     }
     
     @objc private func didTabToSignUpButton() {
-        
+        didTabToSignUpButtonComplition?()
+        print("WelcomeButtonStackView -> didTabToSignUpButton")
     }
     
     @objc private func didTabToSkipButton() {
-        
+        print("WelcomeButtonStackView -> didTabToSkipButton")
     }
     
     // MARK: - Apply Constraints

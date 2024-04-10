@@ -1,5 +1,5 @@
 //
-//  WelcomeContentView.swift
+//  SignInContentView.swift
 //  Lesson15HW
 //
 //  Created by Алина Власенко on 10.04.2024.
@@ -7,18 +7,18 @@
 
 import UIKit
 
-class WelcomeContentView: UIView {
-
-    private let welcomeLabel: UILabel = {
+class SignInContentView: UIView {
+    
+    private let signInLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
         label.font = .systemFont(ofSize: 44, weight: .black)
-        label.text = "Welcome"
+        label.text = "Sign In"
         label.textColor = .systemTeal
         return label
     }()
     
-    let contentStackView = WelcomeButtonStackView() // add stack view
+    let contentStackView = SignInTextFieldStackView() // add stack view
     
     // MARK: - Init
     
@@ -36,7 +36,7 @@ class WelcomeContentView: UIView {
     
     // MARK: - Add Subviews
     private func addSubviews() {
-        addSubview(welcomeLabel)
+        addSubview(signInLabel)
         addSubview(contentStackView)
     }
     
@@ -48,26 +48,27 @@ class WelcomeContentView: UIView {
         contentStackView.contentMode = .scaleToFill
         contentStackView.isLayoutMarginsRelativeArrangement = true
     }
-
-    // MARK: - Apply Constraints
+    
+    // MARK: - Aapply Constraints
     private func applyConstraints() {
         
         contentStackView.translatesAutoresizingMaskIntoConstraints = false
-        welcomeLabel.translatesAutoresizingMaskIntoConstraints = false
+        signInLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        let welcomeLabelConstraints = [
-            welcomeLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            welcomeLabel.heightAnchor.constraint(equalToConstant: 50)
+        let signInLabelConstraints = [
+            signInLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            signInLabel.heightAnchor.constraint(equalToConstant: 50)
         ]
         
         let scrollViewConstraints = [
-            contentStackView.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor, constant: 50),
+            contentStackView.topAnchor.constraint(equalTo: signInLabel.bottomAnchor, constant: 50),
             contentStackView.centerXAnchor.constraint(equalTo: centerXAnchor),
             contentStackView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.6)
         ]
         
         
-        NSLayoutConstraint.activate(welcomeLabelConstraints)
+        NSLayoutConstraint.activate(signInLabelConstraints)
         NSLayoutConstraint.activate(scrollViewConstraints)
     }
 }
+

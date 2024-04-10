@@ -1,5 +1,5 @@
 //
-//  WelcomeViewController.swift
+//  SignUpViewController.swift
 //  Lesson15HW
 //
 //  Created by Алина Власенко on 10.04.2024.
@@ -7,9 +7,9 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+class SignUpViewController: UIViewController {
 
-    let contentView = WelcomeContentView()
+    let contentView = SignUpContentView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +18,6 @@ class WelcomeViewController: UIViewController {
         // setup UI Elements
         addSubviews()
         applyConstraints()
-        setupButtons()
     }
     
     // MARK: - Add Subviews
@@ -34,10 +33,10 @@ class WelcomeViewController: UIViewController {
         let contentViewConstraints = [
             contentView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             contentView.widthAnchor.constraint(equalTo: view.widthAnchor),
-            contentView.heightAnchor.constraint(equalToConstant: 270)
+            contentView.heightAnchor.constraint(equalToConstant: 330)
         ]
         
         NSLayoutConstraint.activate(contentViewConstraints)
     }
-}
 
+}

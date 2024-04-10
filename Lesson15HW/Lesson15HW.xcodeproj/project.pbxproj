@@ -14,6 +14,14 @@
 		6C0FB95A2BC699DA00E48F8E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6C0FB9592BC699DA00E48F8E /* Base */; };
 		6C0FB9662BC6A01E00E48F8E /* WelcomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0FB9652BC6A01E00E48F8E /* WelcomeContentView.swift */; };
 		6C0FB9682BC6A23500E48F8E /* WelcomeButtonStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0FB9672BC6A23500E48F8E /* WelcomeButtonStackView.swift */; };
+		6C0FB96B2BC6AC8100E48F8E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0FB96A2BC6AC8100E48F8E /* SignInViewController.swift */; };
+		6C0FB96E2BC6ACBE00E48F8E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0FB96D2BC6ACBE00E48F8E /* SignUpViewController.swift */; };
+		6C0FB9712BC6ACF000E48F8E /* MainTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0FB9702BC6ACF000E48F8E /* MainTabbarViewController.swift */; };
+		6C0FB9732BC6AD4600E48F8E /* SignInContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0FB9722BC6AD4600E48F8E /* SignInContentView.swift */; };
+		6C0FB9752BC6AD7100E48F8E /* SignInTextFieldStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0FB9742BC6AD7100E48F8E /* SignInTextFieldStackView.swift */; };
+		6C0FB9772BC6AD8600E48F8E /* SignUpContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0FB9762BC6AD8600E48F8E /* SignUpContentView.swift */; };
+		6C0FB9792BC6AD9800E48F8E /* SignUpTextFieldStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0FB9782BC6AD9700E48F8E /* SignUpTextFieldStackView.swift */; };
+		6C0FB97B2BC6C7B700E48F8E /* WelcomeViewController+SetupButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0FB97A2BC6C7B700E48F8E /* WelcomeViewController+SetupButtons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +34,14 @@
 		6C0FB95B2BC699DA00E48F8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C0FB9652BC6A01E00E48F8E /* WelcomeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeContentView.swift; sourceTree = "<group>"; };
 		6C0FB9672BC6A23500E48F8E /* WelcomeButtonStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeButtonStackView.swift; sourceTree = "<group>"; };
+		6C0FB96A2BC6AC8100E48F8E /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		6C0FB96D2BC6ACBE00E48F8E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		6C0FB9702BC6ACF000E48F8E /* MainTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarViewController.swift; sourceTree = "<group>"; };
+		6C0FB9722BC6AD4600E48F8E /* SignInContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInContentView.swift; sourceTree = "<group>"; };
+		6C0FB9742BC6AD7100E48F8E /* SignInTextFieldStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInTextFieldStackView.swift; sourceTree = "<group>"; };
+		6C0FB9762BC6AD8600E48F8E /* SignUpContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpContentView.swift; sourceTree = "<group>"; };
+		6C0FB9782BC6AD9700E48F8E /* SignUpTextFieldStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTextFieldStackView.swift; sourceTree = "<group>"; };
+		6C0FB97A2BC6C7B700E48F8E /* WelcomeViewController+SetupButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WelcomeViewController+SetupButtons.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +96,9 @@
 			isa = PBXGroup;
 			children = (
 				6C0FB9642BC69FB200E48F8E /* WelcomeScreen */,
+				6C0FB9692BC6AC4A00E48F8E /* SignInScreen */,
+				6C0FB96C2BC6ACA500E48F8E /* SignUpScreen */,
+				6C0FB96F2BC6ACD800E48F8E /* MainTabbarScreen */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -88,10 +107,39 @@
 			isa = PBXGroup;
 			children = (
 				6C0FB9512BC699CF00E48F8E /* WelcomeViewController.swift */,
+				6C0FB97A2BC6C7B700E48F8E /* WelcomeViewController+SetupButtons.swift */,
 				6C0FB9652BC6A01E00E48F8E /* WelcomeContentView.swift */,
 				6C0FB9672BC6A23500E48F8E /* WelcomeButtonStackView.swift */,
 			);
 			path = WelcomeScreen;
+			sourceTree = "<group>";
+		};
+		6C0FB9692BC6AC4A00E48F8E /* SignInScreen */ = {
+			isa = PBXGroup;
+			children = (
+				6C0FB96A2BC6AC8100E48F8E /* SignInViewController.swift */,
+				6C0FB9722BC6AD4600E48F8E /* SignInContentView.swift */,
+				6C0FB9742BC6AD7100E48F8E /* SignInTextFieldStackView.swift */,
+			);
+			path = SignInScreen;
+			sourceTree = "<group>";
+		};
+		6C0FB96C2BC6ACA500E48F8E /* SignUpScreen */ = {
+			isa = PBXGroup;
+			children = (
+				6C0FB96D2BC6ACBE00E48F8E /* SignUpViewController.swift */,
+				6C0FB9762BC6AD8600E48F8E /* SignUpContentView.swift */,
+				6C0FB9782BC6AD9700E48F8E /* SignUpTextFieldStackView.swift */,
+			);
+			path = SignUpScreen;
+			sourceTree = "<group>";
+		};
+		6C0FB96F2BC6ACD800E48F8E /* MainTabbarScreen */ = {
+			isa = PBXGroup;
+			children = (
+				6C0FB9702BC6ACF000E48F8E /* MainTabbarViewController.swift */,
+			);
+			path = MainTabbarScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,8 +213,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C0FB9682BC6A23500E48F8E /* WelcomeButtonStackView.swift in Sources */,
+				6C0FB97B2BC6C7B700E48F8E /* WelcomeViewController+SetupButtons.swift in Sources */,
+				6C0FB9712BC6ACF000E48F8E /* MainTabbarViewController.swift in Sources */,
+				6C0FB96E2BC6ACBE00E48F8E /* SignUpViewController.swift in Sources */,
+				6C0FB9752BC6AD7100E48F8E /* SignInTextFieldStackView.swift in Sources */,
 				6C0FB9522BC699CF00E48F8E /* WelcomeViewController.swift in Sources */,
+				6C0FB9792BC6AD9800E48F8E /* SignUpTextFieldStackView.swift in Sources */,
+				6C0FB96B2BC6AC8100E48F8E /* SignInViewController.swift in Sources */,
 				6C0FB9662BC6A01E00E48F8E /* WelcomeContentView.swift in Sources */,
+				6C0FB9772BC6AD8600E48F8E /* SignUpContentView.swift in Sources */,
+				6C0FB9732BC6AD4600E48F8E /* SignInContentView.swift in Sources */,
 				6C0FB94E2BC699CF00E48F8E /* AppDelegate.swift in Sources */,
 				6C0FB9502BC699CF00E48F8E /* SceneDelegate.swift in Sources */,
 			);
