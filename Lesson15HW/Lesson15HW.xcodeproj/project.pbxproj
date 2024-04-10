@@ -92,6 +92,7 @@
 			children = (
 				6C0FB9932BC714DD00E48F8E /* Source */,
 				6C0FB9942BC7154700E48F8E /* Resource */,
+				6C0FB95B2BC699DA00E48F8E /* Info.plist */,
 			);
 			path = Lesson15HW;
 			sourceTree = "<group>";
@@ -225,7 +226,6 @@
 			children = (
 				6C0FB9962BC7158900E48F8E /* Asset */,
 				6C0FB9952BC7156E00E48F8E /* LaunchScreen */,
-				6C0FB9972BC7159C00E48F8E /* Plist */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -244,14 +244,6 @@
 				6C0FB9562BC699D900E48F8E /* Assets.xcassets */,
 			);
 			path = Asset;
-			sourceTree = "<group>";
-		};
-		6C0FB9972BC7159C00E48F8E /* Plist */ = {
-			isa = PBXGroup;
-			children = (
-				6C0FB95B2BC699DA00E48F8E /* Info.plist */,
-			);
-			path = Plist;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
