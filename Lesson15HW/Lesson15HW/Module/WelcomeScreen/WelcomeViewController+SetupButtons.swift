@@ -25,5 +25,12 @@ extension WelcomeViewController {
             self.navigationController?.pushViewController(signUpVC, animated: true)
             navigationController?.isNavigationBarHidden = false
         }
+        // didTabToSkipButtonComplition
+        contentView.contentStackView.didTabToSkipButtonComplition = { [weak self] in
+            guard let self = self else { return }
+            let mainTabbarVC = MainTabbarViewController()
+            self.navigationController?.pushViewController(mainTabbarVC, animated: true)
+            navigationController?.isNavigationBarHidden = true
+        }
     }
 }

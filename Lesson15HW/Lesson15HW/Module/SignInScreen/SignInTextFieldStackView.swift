@@ -9,6 +9,8 @@ import UIKit
 
 class SignInTextFieldStackView: UIStackView {
     
+    var didTabSignInToGoButtonComplition: (() -> ())?
+    
     // MARK: - UI
     private let emailTextField: UITextField = {
         let textField = UITextField()
@@ -32,7 +34,7 @@ class SignInTextFieldStackView: UIStackView {
         return textField
     }()
     
-    private let goButton: UIButton = {
+    private lazy var goButton: UIButton = {
         let button = UIButton()
         button.setTitle("Go", for: .normal)
         button.backgroundColor = .systemBlue
@@ -62,6 +64,7 @@ class SignInTextFieldStackView: UIStackView {
     
     // MARK: - Actions
     @objc private func didTabToGoButtonButton() {
+        didTabSignInToGoButtonComplition?()
         print("SignInTextFieldStackView -> didTabToGoButtonButton")
     }
     

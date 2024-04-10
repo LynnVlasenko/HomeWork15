@@ -18,6 +18,7 @@ class SignUpViewController: UIViewController {
         // setup UI Elements
         addSubviews()
         applyConstraints()
+        setupButtons()
     }
     
     // MARK: - Add Subviews

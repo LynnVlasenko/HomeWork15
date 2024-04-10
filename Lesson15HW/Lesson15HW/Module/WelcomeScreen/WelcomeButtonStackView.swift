@@ -11,9 +11,10 @@ class WelcomeButtonStackView: UIStackView {
     
     var didTabToSignInButtonComplition: (() -> ())?
     var didTabToSignUpButtonComplition: (() -> ())?
+    var didTabToSkipButtonComplition: (() -> ())?
     
     // MARK: - UI
-    private let signInButton: UIButton = {
+    private lazy var signInButton: UIButton = {
         let button = UIButton()
         button.setTitle("Sign In", for: .normal)
         button.backgroundColor = .systemBlue
@@ -23,7 +24,7 @@ class WelcomeButtonStackView: UIStackView {
         return button
     }()
     
-    private let signUpButton: UIButton = {
+    private lazy var signUpButton: UIButton = {
         let button = UIButton()
         button.setTitle("Sign Up", for: .normal)
         button.backgroundColor = .systemBlue
@@ -33,7 +34,7 @@ class WelcomeButtonStackView: UIStackView {
         return button
     }()
     
-    private let skipButton: UIButton = {
+    private lazy var skipButton: UIButton = {
         let button = UIButton()
         button.setTitle("Skip", for: .normal)
         button.backgroundColor = .white
@@ -75,6 +76,7 @@ class WelcomeButtonStackView: UIStackView {
     }
     
     @objc private func didTabToSkipButton() {
+        didTabToSkipButtonComplition?()
         print("WelcomeButtonStackView -> didTabToSkipButton")
     }
     
